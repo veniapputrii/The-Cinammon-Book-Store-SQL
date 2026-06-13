@@ -1,7 +1,7 @@
 # The-Cinammon-Book-Store-SQL
-# The Book Nook: Bookstore Database Project 📚
+# The Cinammon Book Store: Bookstore Database Project 📚
 
-A beginner-friendly PostgreSQL project demonstrating core SQL concepts including database design, data insertion, filtering, sorting, and table joins.
+A beginner-friendly PostgreSQL project demonstrating core SQL concepts, including database design, data insertion, filtering, sorting, and table joins.
 
 ## 🗺️ Database Architecture
 
