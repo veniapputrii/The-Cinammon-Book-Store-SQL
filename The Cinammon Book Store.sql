@@ -1,3 +1,5 @@
+
+
 -- 1. Create the Tables
 CREATE TABLE authors (
     author_id SERIAL PRIMARY KEY,
@@ -37,3 +39,30 @@ INSERT INTO customers (first_name, last_name, email, join_date) VALUES
 ('Alice', 'Smith', 'alice@email.com', '2026-01-15'),
 ('Bob', 'Jones', 'bob@email.com', '2026-02-20'),
 ('Charlie', 'Brown', 'charlie@email.com', '2026-03-05');
+
+SELECT * FROM authors;
+
+-- ✨ The inventory check
+-- 💡 Display all the book titles and their price, but only 
+--    for books than actually in stock (where stock_quantity is greater than 0)
+Select title, price from books where stock_quantity > 0;
+
+-- ✨ The International Authors
+-- 💡 Find the names of all authors who are from the "UK"
+Select * from authors where country = 'UK';
+
+-- ✨ THe big spender
+-- 💡 sort the price from books table from the highest price to the lowest price
+Select * from public.books 
+order by price DESC
+
+-- ✨ Join
+-- 💡 show the book 'title' alongside the 'author_name'
+Select
+authors.author_id author_id1,
+authors.author_name,
+books.author_id author_id2,
+books.title
+from 
+authors
+inner join books on authors.author_id = books.author_id;
