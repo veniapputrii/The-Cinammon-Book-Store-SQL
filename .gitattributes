@@ -1,1 +1,3 @@
-*.mylang linguist-language=SQL
+app/* linguist-documentation=false
+app/* linguist-vendored
+
